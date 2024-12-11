@@ -50,6 +50,30 @@ const inicioPrograma = Number(prompt(`
     }
     function comprarCupuacu() {
         alert("Você tem 3 opções de Manga: [1] Redondo R$5,49   [2] Mamorama R$10,00   [3] Mamau R$2,99")
+
+        var resultado = 0
+        var calculo = (prompt (`O KG do Cupuaçu-redondo é de: R$ 5,49
+            O KG do Cupuaçu-mamorama é de: R$10,00
+            O KG do Cupuaçu-mamau é de: R$2,99
+        _______________________________________
+               QUAL VOCÊ DESEJA COMPRAR?
+        _______________________________________
+        [1] Redondo
+        [2] Mamorama
+        [3] Mamau
+        `))
+        
+        var kilo = (prompt(`Quantos KG você deseja comprar?`))
+        switch (calculo) {
+            case 1:
+                resultado = kilo * 5.49
+                alert (`O Valor é de ${resultado.toLocaleString('pt-br',
+                    {
+                        style: 'currency',
+                        currency: 'brl',
+                    }
+                )}`)
+        }
     }
 switch (inicioPrograma) {
     case 1:
